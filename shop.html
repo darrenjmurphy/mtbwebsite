@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Home Page</title>
+
+            <link rel="stylesheet" href="style.css">
+        </head>
+    <body>
+        <!-- Page Container -->
+        <div id="container">
+          <!-- Header -->
+          <header>
+            <!-- Logo -->
+            <div id = "logo">
+               <img src="images/logofinal.png" alt="logo"> 
+            </div>
+            <!-- Navigation -->
+            <nav>
+              <ul>
+                  <li>
+                      <a href="index.html" title="Override">
+                        Home
+                      </a>
+                  </li>
+                  
+                  <li>
+                      <a href="about.html" title="About us page">
+                        About
+                      </a>
+                  </li>
+                  
+                  <li>
+                      <a href="projects.html" title="Projects page">
+                        Projects
+                      </a>
+                  </li>
+                        
+                  <li>
+                      <a href="shop.html" title="Online shop" class="active">
+                        Shop
+                      </a>
+                  
+                  </li>
+                  
+                  <li>
+                      <a href="comments.html" title="Latest feed from comment page.">
+                        Comment Page
+                      </a>
+                  </li>
+                </ul>   
+            </nav>
+                
+            </header>
+        
+        
+         
+         
+            <h2>Shop</h2>
+              <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+
+<div class="row">
+  <div class="left" style="background-color:rgb(140, 99, 63);">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="bikes.html">Bikes</a></li>
+      <li><a href="tyres.html">Tyres</a></li>
+      <li><a href="bars.html">Bars</a></li>
+      <li><a href="stems.html">Stems</a></li>
+      <li><a href="brakes.html">Brakes</a></li>
+      <li><a href="gears.html">Gears</a></li>
+      <li><a href="ebikekit.html">E-Bike Kits</a></li>
+      <li><a href="seatposts.html">Seatposts</a></li>
+      <li><a href="bluetooth.html">Bluetooth Speakers</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:rgb(122, 71, 24);">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+        </div>
+            <!-- Footer -->
+            <footer>
+              <small>&copy; 2022 Override Ltd. All Rights Reserved</small> - <a href="sitemap.html" title="Links to all the pages on this website">Sitemap</a>
+            </footer>
+        </div>
+</body>
+</html>
